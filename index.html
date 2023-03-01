@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+<!--css-->
+        <style>
+           @import url(manu1.css);
+
+        </style>
+<!--Endcss-->
+ 
+    </head>
+    <body>
+        <!--size tabs-->
+        <header>
+
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        </header>
+        <title>phone.media</title>
+        <!--Manu bar-->
+        <nav class="dropdown" style="display:inline; background-color: #3e8e41;">
+                <button class="dropbth">Manu</button>
+                <div class="dropdown-content">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="credit.html">Credit</a></li>
+                </div>
+        </nav>   
+        <!--phone bar-->
+        <section>
+         <ul style="display: inlin-end; border: outset 1px black; background-color: #3e8e41;">
+            <li><a href="iphone_14.html">iphone14</a></li>
+            <li><a href="iphone_13.html">iphone 13</a></li>
+            <li><a href="iphone_12.html">iphone 12</a></li>
+            <li><a href="iphone_11.html">iphone 11</a></li>
+            <li><a href="iphone_x.html">iphone 10</a></li>
+            <li><a href="iphone_8.html">iphone 8</a></li>
+            <li><a href="iphone_7.html">iphone 7</a></li>
+            <li><a href="iphone_6.html">iphone 6</a></li>
+
+            
+         </ul>
+        </section>
+        <!--img.exe-->
+        <article style="margin: 5px;">
+            <img src="images.jpg" width="850" height="440">
+        </article>
+        <!--อันดับมือถือ-->
+        <footer>
+            <h1 style="font-size: large;">4อันดับ มือถือที่มีคนใช้มากที่สุด (ในเมืองไทย)</h1>
+            <h1 style="font-size: medium;">Samsung</h1>
+            <h1 style="font-size: medium;">Oppo</h1>
+            <h1 style="font-size: medium;">Xiaomi</h1>
+            <h1 style="font-size: medium;">Vivo</h1>
+            <h></h>
+        </footer>
+        <!--coment-->
+        <form>
+            <label for="comment">Comment:</label>
+            <input type="text" id="comment" name="comment">
+            <input type="submit" value="Submit">
+        </form>
+          
+          <div id="comments">
+            <h2>Comments</h2>
+          </div>
+        
+          <script>
+            const form = document.querySelector('form');
+            const comments = document.querySelector('#comments');
+        
+            form.addEventListener('submit', function(event) {
+              event.preventDefault();
+        
+              const comment = document.createElement('div');
+              comment.className = 'comment';
+              comment.textContent = form.elements.comment.value;
+              comments.appendChild(comment);
+        
+              form.reset();
+            });
+          </script>
+        
+        <!--End-->
+
+    </body>
+</html>
